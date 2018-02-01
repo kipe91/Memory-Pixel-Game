@@ -1,0 +1,22 @@
+/* 
+    Code by Kim Pettersson. 
+    Free to use but be nice and ref to me then.
+    https://www.facebook.com/kipe91, 
+    https://www.instagram.com/kimp3tt3rsson.
+*/
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+  .right_cell {
+    margin-left: auto;
+  }
+  img {
+    margin: 1px;
+  }
+  input[type=button] {
+    width: 45%;
+    height: 25px;
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Games</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Kim Pettersson">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="zocial.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_responsive.css">
+    <base target="_blank">
+</head>
+
+<body>
+  <h1>Pixel Art Maker</h1>
+  <div class="site">
+
+	<div class="left_cell">
+		Select Game: <br>
+		<input type="button" id="pixelGame_btn" value="Pixel Art Maker">
+		<input type="button" id="memoryGame_btn" value="Memory">
+<!-- Pixel Game -->
+		<section id="pixelGame">
+		    <div class="container">
+		    <h2>Select Grid Setup:</h2>
+		    <span id="deleteNote">NOTE: Changing this will delete your current activity if not saved.</span>
+			    <form id="sizePicker">
+			        <input type="number" id="input_height" name="height" min="1" max="50" value="15">
+			        X
+			        <input type="number" id="input_width" name="width" min="1" max="50" value="15">
+			        <br>
+			        <input type="submit">
+			    </form>
+			</div>
+
+			<div class="container">
+				<p>Change pixels size to zoom in/out:</p>
+			    <input type="number" id="input_size" name="size" min="1" max="80" value="20">
+			    <table id="pixel_fix"><tr><td></td></tr></table>
+			</div>
+
+			<div class="container">
+				<h2>Pick A Color:</h2>
+				<input type="color" id="colorPicker_1" value="#0000ef">
+				<input type="color" id="colorPicker_2" value="#ef0000">
+				<input type="color" id="colorPicker_3" value="#000000">
+				<input type="color" id="colorPicker_4" value="#ffffff">
+				<br>
+				<form>
+				<input type="checkbox" id="checkbox_1" name="123" value="#colorPicker_1">
+				<input type="checkbox" id="checkbox_2" name="123" value="#colorPicker_2">
+				<input type="checkbox" id="checkbox_3" name="123" value="#colorPicker_3">
+				<input type="checkbox" id="checkbox_4" name="123" value="#colorPicker_4">
+				</form>
+			</div>
+
+			<div class="container notActive">
+				<!-- class "notActive" hides this block -->
+				<h2>Paint tool size:</h2>
+				<input type="range" min="1" max="4" value="1" class="paintSlider" id="sliderValue">
+				<span id="sliderSpot">Size: <i>1</i></span>
+			</div>
+		</section>
+
+<!-- Memory Game -->
+
+		<section id="memoryGame">
+			<div class="container">
+		    <h2>Select amount of cards:</h2>
+		    <span id="deleteNote">NOTE: Changing this will delete your current activity.</span>
+		    <form id="memory_size">
+		    	<br>
+			    <input style="width: 75px" type="button" id="memory6_btn" value="6 Cards">
+			    <input style="width: 75px" type="button" id="memory12_btn" value="12 Cards">
+			    <input style="width: 75px" type="button" id="memory24_btn" value="24 Cards">
+			</form>
+			</div>
+
+			<div class="container">
+				<span>Player name: </span>
+				<input type="text" id="playerName" name="playerName">
+			</div>
+
+			<div id="divCounter">
+				<h2 class="countB">Best results:</h2>
+				<table>
+				  <tr>
+				    <th style="width: 80px"></th>
+				    <th style="width: 80px">6 Cards:</th> 
+				    <th style="width: 150px">Player:</th>
+				  </tr>
+				  <tr>
+				    <td>Nr1:</td>
+				    <td id="bestArea6_click_1">50</td> 
+				    <td id="bestArea6_name_1"></td>
+				  </tr>
+				  <tr>
+				    <td>Nr2:</td>
+				    <td id="bestArea6_click_2">50</td> 
+				    <td id="bestArea6_name_2"></td>
+				  </tr>
+				  <tr>
+				    <td>Nr3:</td>
+				    <td id="bestArea6_click_3">50</td> 
+				    <td id="bestArea6_name_3"></td>
+				  </tr>
+				</table>
+				<table>
+				  <tr>
+				    <th style="width: 80px"></th>
+				    <th style="width: 80px">12 Cards:</th> 
+				    <th style="width: 150px">Player:</th>
+				  </tr>
+				  <tr>
+				    <td>Nr1:</td>
+				    <td id="bestArea12_click_1">50</td> 
+				    <td id="bestArea12_name_1"></td>
+				  </tr>
+				  <tr>
+				    <td>Nr2:</td>
+				    <td id="bestArea12_click_2">50</td> 
+				    <td id="bestArea12_name_2"></td>
+				  </tr>
+				  <tr>
+				    <td>Nr3:</td>
+				    <td id="bestArea12_click_3">50</td> 
+				    <td id="bestArea12_name_3"></td>
+				  </tr>
+				</table>
+				<table>
+				  <tr>
+				    <th style="width: 80px"></th>
+				    <th style="width: 80px">24 Cards:</th> 
+				    <th style="width: 150px">Player:</th>
+				  </tr>
+				  <tr>
+				    <td>Nr1:</td>
+				    <td id="bestArea24_click_1">70</td> 
+				    <td id="bestArea24_name_1"></td>
+				  </tr>
+				  <tr>
+				    <td>Nr2:</td>
+				    <td id="bestArea24_click_2">70</td> 
+				    <td id="bestArea24_name_2"></td>
+				  </tr>
+				  <tr>
+				    <td>Nr3:</td>
+				    <td id="bestArea24_click_3">70</td> 
+				    <td id="bestArea24_name_3"></td>
+				  </tr>
+				</table>
+			</div>
+		</section>
+	</div>
+
+<!-- End of left and start of right cell -->
+
+	<div class="right_cell">
+	    <table id="pixel_canvas"></table>
+	    <br>
+	    <span id="message"></span>
+	    <br>
+		<span class="countA">| Total clicks: <span id="countArea">0</span> |</span>
+	</div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="designs.js"></script>
+
+<!--
+	Code by Kim Pettersson. 
+	Free to use but be nice and ref to me then.
+	https://www.facebook.com/kipe91, 
+	https://www.instagram.com/kimp3tt3rsson.
+-->
+
+<footer>
+  <hr width="90%" size="1px">
+  <a class="zocial twitter">My twitts</a> |
+  <a class="zocial facebook" href="https://www.facebook.com/kipe91">Facebook site</a> |
+  <a class="zocial googleplus">Follow me on G+</a>
+</footer>
+
+</body>
+</html>
